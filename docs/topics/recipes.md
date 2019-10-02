@@ -1504,3 +1504,10 @@ right-to-left.
 // right-to-left worksheet
 $spreadsheet->getActiveSheet()->setRightToLeft(true);
 ```
+
+## Reading the headers from a worksheet
+
+```php
+$myWorksheet = $mySpreadsheet->getActiveSheet();
+$headers = $myWorksheet->rangeToArray("A1:" . $myWorksheet->getHighestColumn(1) . "1")[0];
+```
